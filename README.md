@@ -1,18 +1,19 @@
-# ²âÊÔÔ­ÉúAJAX
+# æµ‹è¯•åŽŸç”ŸAJAX
 
-Ô­ÉúAJAXÁË½âÏÂ£¬ËäÈ»ºÜÄÑÓÃµ½£¬Ô­ÉúµÄajaxÖ÷ÒªÓÐËÄ²½£º
-1. ´´½¨Òì²½¶ÔÏó XMLHTmlRequest¶ÔÏó
-¡¡2.ÉèÖÃ×´Ì¬¸Ä±äµÄ¼àÌý£¬»á´¥·¢Ò»¸öº¯Êý£¬¸Ãº¯ÊýÍ¨³£±»³ÆÖ®Îª»Øµ÷º¯Êý
+åŽŸç”ŸAJAXäº†è§£ä¸‹ï¼Œè™½ç„¶å¾ˆéš¾ç”¨åˆ°ï¼ŒåŽŸç”Ÿçš„ajaxä¸»è¦æœ‰å››æ­¥ï¼š
+1. åˆ›å»ºå¼‚æ­¥å¯¹è±¡ XMLHTmlRequestå¯¹è±¡
+ã€€2.è®¾ç½®çŠ¶æ€æ”¹å˜çš„ç›‘å¬ï¼Œä¼šè§¦å‘ä¸€ä¸ªå‡½æ•°ï¼Œè¯¥å‡½æ•°é€šå¸¸è¢«ç§°ä¹‹ä¸ºå›žè°ƒå‡½æ•°
     xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) { // ÇëÇó·¢ËÍ³É¹¦
-            if (xhr.status == 200) { // ÏìÓ¦Ò²³É¹¦
-                // »ñµÃÏìÓ¦µÄÊý¾Ý
+        if (xhr.readyState == 4) { // è¯·æ±‚å‘é€æˆåŠŸ
+            if (xhr.status == 200) { // å“åº”ä¹ŸæˆåŠŸ
+                // èŽ·å¾—å“åº”çš„æ•°æ®
                 var data = xhr.responseText;
-                // ½«ÏòÒ³ÃæÊä³öµÄÊý¾ÝÐ´Èëµ½divÖÐ
+                // å°†å‘é¡µé¢è¾“å‡ºçš„æ•°æ®å†™å…¥åˆ°divä¸­
                 document.getElementById("d1").innerHTML = data;
             }
 1.         }
-¡¡¡¡3.ÉèÖÃÇëÇóµÄÂ·¾¶
+ã€€ã€€3.è®¾ç½®è¯·æ±‚çš„è·¯å¾„
    xhr.open("GET", "/TestAjax/ServletDemo1", true);
-    // 4.·¢ËÍÇëÇó£¬Ã»ÓÐÇëÇó²ÎÊý¾ÍÐ´null
+    // 4.å‘é€è¯·æ±‚ï¼Œæ²¡æœ‰è¯·æ±‚å‚æ•°å°±å†™null
+    <br>
     xhr.send(null);
